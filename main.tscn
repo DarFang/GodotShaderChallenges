@@ -5,9 +5,9 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
-shader_parameter/rim_color = Color(1, 0, 0, 1)
-shader_parameter/rim_thickness = 1.806
-shader_parameter/threshold = 0.1
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_thickness = 1.0
+shader_parameter/threshold = 0.201
 shader_parameter/toggle = true
 shader_parameter/size_muliplier = 1.0
 
@@ -15,5 +15,6 @@ shader_parameter/size_muliplier = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_1bvp3")
+position = Vector2(151, 109)
 scale = Vector2(0.998532, 1)
 texture = ExtResource("2_0xm2m")
