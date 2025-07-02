@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1pjmnnken4kt"]
+
+[ext_resource type="Shader" uid="uid://clhch5xdri6y6" path="res://2DOutline.gdshader" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://5ggbskrcgua2" path="res://icon.png" id="2_0xm2m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
+shader = ExtResource("1_0xm2m")
+shader_parameter/rim_color = Color(1, 0, 0, 1)
+shader_parameter/rim_thickness = 1.806
+shader_parameter/threshold = 0.1
+shader_parameter/toggle = true
+shader_parameter/size_muliplier = 1.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_1bvp3")
+scale = Vector2(0.998532, 1)
+texture = ExtResource("2_0xm2m")
