@@ -7,13 +7,13 @@
 shader = ExtResource("1_0xm2m")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_thickness = 1.0
-shader_parameter/threshold = 0.201
-shader_parameter/toggle = true
-shader_parameter/size_muliplier = 1.0
+shader_parameter/threshold = 0.1
+shader_parameter/toggle = false
+shader_parameter/size_muliplier = 1.1
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="challenge1" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_1bvp3")
 position = Vector2(151, 109)
 scale = Vector2(0.998532, 1)
