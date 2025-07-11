@@ -40,4 +40,6 @@ This is a simple way to highlight an item and show that it’s special.
 - Samples the UV diagonally to create a simple moving mask, then adds this mask as a shine on top of the tint effect.
 
 ### 🎥 Demo / Video Link  
+https://github.com/user-attachments/assets/4558ff71-afb4-4c72-90b3-9481e6b17f5f
+
 
