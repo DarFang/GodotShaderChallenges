@@ -21,3 +21,23 @@ This helps make interactable objects clear and visually appealing.
 ### 🎥 Demo / Video Link
 https://github.com/user-attachments/assets/b7f53b98-2a5f-4dbe-b15e-cf24720eccf0
 
+# 2. Godot Enchantment Shine Shader
+
+### 📝 Description  
+Many games use visual indicators to show when an item is enchanted, enhanced, or magical.  
+In this challenge, I created a **2D shader** in **Godot** to replicate a Minecraft-style enchantment effect purely through shader code.  
+The shader does two things:  
+- Adds a **tint** effect that multiplies a color with the pixel color and uses a subtle breathing animation to make the tint pulse over time.  
+- Adds a **glint** effect that moves a diagonal shine across the sprite, making it look shiny and enchanted.
+
+This is a simple way to highlight an item and show that it’s special.
+
+### 🧩 Solution  
+**Tint:**  
+- Uses a sine wave to make the tint strength pulse, multiplying this with the original pixel color to create a subtle breathing effect.
+
+**Glint:**  
+- Samples the UV diagonally to create a simple moving mask, then adds this mask as a shine on top of the tint effect.
+
+### 🎥 Demo / Video Link  
+
