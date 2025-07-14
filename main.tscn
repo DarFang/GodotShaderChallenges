@@ -1,20 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1pjmnnken4kt"]
+[gd_scene load_steps=9 format=3 uid="uid://d1pjmnnken4kt"]
 
 [ext_resource type="Shader" uid="uid://clhch5xdri6y6" path="res://2DOutline.gdshader" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://5ggbskrcgua2" path="res://icon.png" id="2_0xm2m"]
+[ext_resource type="Shader" uid="uid://ceg48g0nmo67g" path="res://Enchantment.gdshader" id="3_h2yge"]
+[ext_resource type="Shader" uid="uid://bo2vnvnqlomur" path="res://DarkMode.gdshader" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bnix1j1k4fqmg" path="res://Untitled.jpeg" id="4_lquwl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_thickness = 1.0
-shader_parameter/threshold = 0.1
-shader_parameter/toggle = false
-shader_parameter/size_muliplier = 1.1
+shader_parameter/outline_color = Color(0, 0.59, 0.422833, 1)
+shader_parameter/outline_thickness = 2.02
+shader_parameter/threshold = 0.161
+shader_parameter/toggle = true
+shader_parameter/size_muliplier = 1.071
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lquwl"]
+shader = ExtResource("3_h2yge")
+shader_parameter/tint_color = Color(0.122059, 0.38064, 0.373617, 0.788235)
+shader_parameter/tint_pct = 0.5
+shader_parameter/tint_freq = 0.917
+shader_parameter/tint_amp = 0.265
+shader_parameter/glint_color = Color(0.173631, 0.176415, 0.0498068, 1)
+shader_parameter/glint_width = 1.19
+shader_parameter/glint_speed = 1.42
+shader_parameter/frequency = 1.22
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/dark_mode = true
+shader_parameter/desaturation = 0.4
 
 [node name="Main" type="Node2D"]
 
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(96, -8)
+texture = ExtResource("2_0xm2m")
+
 [node name="challenge1" type="Sprite2D" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_1bvp3")
 position = Vector2(151, 109)
 scale = Vector2(0.998532, 1)
 texture = ExtResource("2_0xm2m")
+
+[node name="challenge2" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_lquwl")
+texture = ExtResource("2_0xm2m")
+
+[node name="Untitled" type="Sprite2D" parent="."]
+position = Vector2(-102, 4)
+texture = ExtResource("4_lquwl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7mycd")
+offset_left = 11.0
+offset_top = -84.0
+offset_right = 158.0
+offset_bottom = 102.0
