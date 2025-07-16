@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1pjmnnken4kt"]
+[gd_scene load_steps=8 format=3 uid="uid://d1pjmnnken4kt"]
 
 [ext_resource type="Shader" uid="uid://clhch5xdri6y6" path="res://2DOutline.gdshader" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://5ggbskrcgua2" path="res://icon.png" id="2_0xm2m"]
 [ext_resource type="Shader" uid="uid://ceg48g0nmo67g" path="res://Enchantment.gdshader" id="3_h2yge"]
 [ext_resource type="Shader" uid="uid://bo2vnvnqlomur" path="res://DarkMode.gdshader" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://bnix1j1k4fqmg" path="res://Untitled.jpeg" id="4_lquwl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/dark_mode = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
@@ -25,15 +28,32 @@ shader_parameter/glint_width = 1.19
 shader_parameter/glint_speed = 1.42
 shader_parameter/frequency = 1.22
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
-shader = ExtResource("4_1bvp3")
-shader_parameter/dark_mode = true
-shader_parameter/desaturation = 0.4
-
 [node name="Main" type="Node2D"]
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+z_index = -615
+offset_left = -397.0
+offset_top = -142.0
+offset_right = 142.0
+offset_bottom = 121.0
+color = Color(0, 0, 0, 1)
+
+[node name="Challange3" type="ColorRect" parent="Control"]
+z_index = 4096
+material = SubResource("ShaderMaterial_7mycd")
+offset_left = -236.0
+offset_top = -116.0
+offset_right = 103.0
+offset_bottom = 86.0
+
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(96, -8)
+position = Vector2(-89, -12)
 texture = ExtResource("2_0xm2m")
 
 [node name="challenge1" type="Sprite2D" parent="."]
@@ -47,14 +67,3 @@ texture = ExtResource("2_0xm2m")
 visible = false
 material = SubResource("ShaderMaterial_lquwl")
 texture = ExtResource("2_0xm2m")
-
-[node name="Untitled" type="Sprite2D" parent="."]
-position = Vector2(-102, 4)
-texture = ExtResource("4_lquwl")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_7mycd")
-offset_left = 11.0
-offset_top = -84.0
-offset_right = 158.0
-offset_bottom = 102.0
