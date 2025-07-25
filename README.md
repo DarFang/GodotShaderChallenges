@@ -80,3 +80,24 @@ This effect makes light colors appear dark and dark colors appear light, creatin
 ### 🎥 Demo / Video Link  
 
 https://github.com/user-attachments/assets/ab440ee4-44ff-42a7-9503-c53faa285a67
+
+
+# 4. Godot Fish-Eye Distortion Shader
+
+### 📝 Description  
+Lots of different games that want to simulate a **video camera lens** or the view from a **robot’s perspective** use a fish-eye effect to make the screen feel distorted and immersive.  
+In this challenge, I tackled that exact problem by building a **2D shader** in **Godot** that warps the screen outward using a fish-eye distortion.  
+The result is a curved lens feel that can be used for robot UIs, retro cameras, or just to add visual flair to a scene.
+
+### 🧩 Solution  
+**Fish-Eye Distortion:**  
+- We compute the **offset from the center** of the screen to each pixel.  
+- Then we use the **squared distance** (dot product instead of expensive length()) to control the **distortion strength**.  
+- Finally, we remap the UV by adding the offset times the distortion amount back to the center.  
+- This shifts pixels outward, giving the warped fish-eye look.
+
+> The fish-eye effect works best when the source image or texture **doesn't have important visual details near the corners**, since those areas may get heavily stretched or clipped.  
+> To improve the effect, it’s recommended to **zoom in slightly** or render a **larger area into a `ViewportTexture`** so the distortion has enough pixel data to pull from.
+
+### 🎥 Demo / Video Link  
+![ShdaerChallenge4](https://github.com/user-attachments/assets/61b88e02-7287-4409-8ed8-9b3a95a482eb)
