@@ -88,7 +88,6 @@ shadow_mesh = SubResource("ArrayMesh_bbk0b")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8ce7h"]
 shader = ExtResource("2_dmrlw")
 shader_parameter/dark_mode = false
-shader_parameter/desaturation = 0.0
 
 [node name="Main2" type="Node3D"]
 
