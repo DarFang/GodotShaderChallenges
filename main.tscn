@@ -32,7 +32,7 @@ shader_parameter/frequency = 1.22
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
 shader = ExtResource("6_7mycd")
-shader_parameter/pixel_scale = 0.0
+shader_parameter/pixel_scale = 1.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_5vw27"]
 viewport_path = NodePath("SubViewport")
@@ -121,8 +121,6 @@ texture = SubResource("ViewportTexture_5vw27")
 [node name="Challenge 5" type="TextureRect" parent="Control"]
 material = SubResource("ShaderMaterial_272bh")
 layout_mode = 0
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 1926.0
-offset_bottom = 1087.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = SubResource("ViewportTexture_5vw27")
