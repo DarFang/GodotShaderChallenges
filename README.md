@@ -101,3 +101,29 @@ The result is a curved lens feel that can be used for robot UIs, retro cameras, 
 
 ### 🎥 Demo / Video Link  
 ![ShdaerChallenge4](https://github.com/user-attachments/assets/61b88e02-7287-4409-8ed8-9b3a95a482eb)
+
+# 5. Godot Pixelation Shader
+
+### 📝 Description  
+Pixelation is a versatile visual effect commonly used in games for stylistic transitions, blurring sensitive images, or creating retro aesthetics.  
+In this shader challenge, I developed a **2D shader** in **Godot** that pixelates the screen, similar to the iconic encounter transition seen in classic Pokémon battles.  
+This effect reduces visual clarity, creating a blocky, nostalgic look.
+
+---
+
+### 🧩 Solution  
+**Pixelation Technique:**  
+- Calculate the **pixel resolution** based on the screen’s aspect ratio and a user-defined scaling factor.  
+- Multiply the original UV coordinates by this pixel resolution.  
+- Use the `floor()` function to snap to the nearest lower coordinate.  
+- Divide by the pixel resolution to return to normalized UV space.  
+- Sample the texture at these modified coordinates and replace the pixel color.  
+
+This groups pixels together into larger blocks, resulting in the pixelated effect.
+
+---
+
+### 🎥 Demo / Video Link  
+![ShaderChallenge5](https://github.com/user-attachments/assets/68468bd4-83ec-4069-baa8-cb638dd339cb)
+
+
