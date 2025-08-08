@@ -125,5 +125,3 @@ This groups pixels together into larger blocks, resulting in the pixelated effec
 
 ### 🎥 Demo / Video Link  
 ![ShaderChallenge5](https://github.com/user-attachments/assets/68468bd4-83ec-4069-baa8-cb638dd339cb)
-
-
