@@ -125,3 +125,37 @@ This groups pixels together into larger blocks, resulting in the pixelated effec
 
 ### 🎥 Demo / Video Link  
 ![ShaderChallenge5](https://github.com/user-attachments/assets/68468bd4-83ec-4069-baa8-cb638dd339cb)
+
+# 6. Godot ASCII Shader
+
+### 📝 Description  
+Following up on last week’s **Pixelation Shader**, I wanted to push the retro aesthetic further by replacing each pixel block with an **ASCII character**.  
+This effect maps image brightness to text glyphs, creating that classic “ASCII art” look,  but in real-time inside Godot.  
+
+It’s a fun way to turn a scene into something that feels printed on an old terminal screen.  
+
+---
+
+### 🧩 Solution  
+
+**Pixelation Base (from Challenge #5):**  
+- Start with the same **pixelation grid resolution** to break the screen into larger blocks.  
+
+**Brightness to ASCII Index:**  
+- For each pixel block, grab its **illuminance value** (brightness).  
+- Map this value to an **ASCII index**, choosing characters from a pre-made ASCII texture (PNG).  
+
+**Character Sampling:**  
+- Use the **fractional part** of the UV (multiplied by the grid resolution) to locate the correct character in the ASCII texture.  
+- Sample the pixel from the ASCII character grid and overlay it onto the scene.  
+
+**Possible Improvements:**  
+- Sample from the **center of each block** instead of the corner for more accurate glyph selection.  
+- Take the **average brightness** of the block to better represent detailed images.  
+- Experiment with RGB → HSV conversion to **boost lightness or saturation**, although high saturation can make faces and subtle details look unnatural.  
+
+---
+
+### 🎥 Demo / Video Link  
+![challenge-6](https://github.com/user-attachments/assets/ac737e90-c500-423c-a707-bd5e30ae83b6)
+
